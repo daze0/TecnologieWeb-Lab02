@@ -52,7 +52,7 @@ nav ul li a {
     width: 100%;
 }
 
-nav ul li a:hover, main>article>footer>a:hover, aside>section>ul>li>a:hover {
+nav ul li a:hover, main>article>footer>a:hover, aside>section>ul>li>a:hover, main>form>ul>li>input[type="submit"]:hover {
     color: rgb(219, 69,83);
 }
 
@@ -60,7 +60,7 @@ main {
     margin: 20px 5% 0;
 }
 
-main>article {
+main>article, main>section, main>form {
     background-color: #fff;
     border: 1px solid #cacaca;
     margin-bottom: 20px;
@@ -95,7 +95,7 @@ main>article>footer {
     text-align: right;
 }
 
-main>article>footer>a {
+main>article>footer>a, main>form>ul>li>input[type="submit"] {
     background-color: #e4e4e4;
     color: #000;
     padding: 5px 10px;
@@ -103,6 +103,64 @@ main>article>footer>a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 /* Lab03 */
+main>section>h2, main>form>h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main>section {
+    padding: 20px 5%;
+}
+
+main>section>table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+main>section>table th, main>section>table td {
+    border: 1px solid #000;
+    padding: 5px 0;
+}
+
+main>section>table th {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form {
+    padding: 0 5% 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 10%;
+}
+
+form ul li {
+    margin-bottom: 20px;
+}
+
+form ul li:last-child {
+    text-align: right;
+}
+
+form ul li label {
+    display: inline-block;
+    width: 50%;
+    cursor: pointer;
+}
+
+form ul li input:not([type="submit"]) {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+form ul li input[type="submit"] {
+    border-width: 1px;
+}
+
 aside {
     margin: 0 5% 20px;
     background-color: #fff;
@@ -172,5 +230,9 @@ aside>section:nth-child(2)>ul>li {
         width: 25%;
         margin: 20px 5% 0 0;
         box-sizing: border-box;
+    }
+
+    main>section>table {
+        width: 80%;
     }
 }
